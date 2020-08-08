@@ -12,7 +12,7 @@
 		<h1>To Buy</h1>
 		<ul ng-repeat="item in getToBuy()">
 			<li>
-				{{item.quantity}} {{item.package}} of {{item.name}}
+				Buy {{item.quantity}} {{item.package}} of {{item.name}}
 				<button ng-click="BuyItem($index)">
 					Bought
 				</button>
@@ -30,7 +30,7 @@
 		<h1>Already Bought</h1>
 		<ul ng-repeat="item in getBought()">
 			<li>
-				{{item.quantity}} {{item.package}} of {{item.name}}
+				Bought {{item.quantity}} {{item.package}} of {{item.name}}
 			</li>
 		</ul>
 		
