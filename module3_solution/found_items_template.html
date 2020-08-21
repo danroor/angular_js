@@ -1,0 +1,24 @@
+<div class="itemslist">
+	<ol>
+		<div ng-if="items.length == 0">
+			Nothing found!
+		</div>
+
+		<li ng-repeat="item in items" ng-hide="items[0] === 1">
+			{{item.name}} ({{item.short_name}} shortly)
+
+			<button ng-click="remove($index)">
+				Don't want this one!
+			</button>
+			<br>
+			<br>
+
+			{{item.description}}
+
+			<br>
+			<br>
+			
+		</li>
+	</ol>
+
+</div>		
