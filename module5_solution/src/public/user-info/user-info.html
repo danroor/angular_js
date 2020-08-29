@@ -1,0 +1,24 @@
+<div ng-if="userCtrl.registered" style="margin-left:20px">
+	First name: {{ userCtrl.user.name }}
+	<br>
+	Last name: {{ userCtrl.user.surname }}
+	<br>
+	E-mail: {{ userCtrl.user.email }}
+	<br>
+	Phone number: {{ userCtrl.user.phone }}
+	<br>
+	Favourite dish: {{ userCtrl.user.favDish.name }}
+	<br>
+
+	<img src="https://www.davidchuschinabistro.com/images/{{userCtrl.user.favDish.short_name}}.jpg">
+
+	<br>
+
+	{{userCtrl.user.favDish.description}}
+
+</div>
+
+<div ng-if="!userCtrl.registered" style="margin-left:20px">
+	Not signed up yet.
+	<a ui-sref="public.register"> Sign up now!</a>
+</div>

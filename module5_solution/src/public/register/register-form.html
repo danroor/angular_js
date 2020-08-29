@@ -1,0 +1,96 @@
+<div style="margin-left:20px;margin-bottom: 15px">
+	Sign up for restaurant's newsletter!
+</div>
+
+<form name="regForm" style="margin-left:20px">
+	<input type="text"
+		   placeholder="First name"
+		   name="name"
+		   ng-model="regCtrl.name"
+		   required
+		   style="color:black">
+	
+	<span ng-if="regForm.name.$error.required && regForm.name.$touched">
+		First name is required!
+	</span>
+
+	<br>
+
+	<input type="text"
+		   placeholder="Last name"
+		   name="surname"
+		   ng-model="regCtrl.surname"
+		   required
+		   style="color:black">
+
+	<span ng-if="regForm.surname.$error.required && regForm.surname.$touched">
+		Last name is required
+	</span>
+
+	<br>
+
+	<input type="email"
+		   placeholder="e-mail"
+		   name="email"
+		   ng-model="regCtrl.email"
+		   required
+		   style="color:black">
+
+	<span ng-if="regForm.email.$error.required && regForm.email.$touched">
+		e-mail is required
+	</span>
+
+	<span ng-if="regForm.email.$error.type && regForm.email.$touched">
+		Incorrect e-mail format
+	</span>
+
+	<br>
+
+	<input type="tel"
+		   placeholder="Phone ###-###-####"
+		   name="phone"
+		   ng-model="regCtrl.phone"
+		   required
+		   pattern="(\d{3})-(\d{3})-(\d{4})"
+		   style="color:black">
+
+	<span ng-if="regForm.phone.$error.required && regForm.phone.$touched">
+		Phone number is required
+	</span>
+
+	<span ng-if="regForm.phone.$error.pattern && regForm.phone.$touched">
+		Phone number format ###-###-#### is required
+	</span>
+
+
+	<br>
+
+	<input type="text"
+		   placeholder="Favourite dish shortly"
+		   name="favDish"
+		   ng-model="regCtrl.favDish"
+		   ng-click="regCtrl.resetNoDish()"
+		   required
+		   style="color:black">
+
+	<span ng-if="regForm.favDish.$error.required && regForm.favDish.$touched">
+		Favourite dish is required
+	</span>
+
+	<span ng-if="regCtrl.noDish">
+		No such menu number exists
+	</span>
+
+	<br>
+
+	<button ng-disabled="regForm.$invalid"
+			ng-click="regCtrl.register()"
+			style="color:black;margin-top: 15px">
+		Sign up
+	</button>
+
+</form>
+
+<span style="margin-left:20px" ng-if="regCtrl.registered">
+	Your information has been saved
+</span>
