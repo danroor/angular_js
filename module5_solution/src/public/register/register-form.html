@@ -1,8 +1,8 @@
-<div style="margin-left:20px;margin-bottom: 15px">
+<div style="margin-top:20px;margin-bottom: 15px;text-align: center">
 	Sign up for restaurant's newsletter!
 </div>
 
-<form name="regForm" style="margin-left:20px">
+<form name="regForm" style="margin-left: 38%;margin-right: 0px">
 	<input type="text"
 		   placeholder="First name"
 		   name="name"
@@ -10,7 +10,8 @@
 		   required
 		   style="color:black">
 	
-	<span ng-if="regForm.name.$error.required && regForm.name.$touched">
+	<span ng-if="regForm.name.$error.required && regForm.name.$touched"
+		  style="text-align: ">
 		First name is required!
 	</span>
 
@@ -85,12 +86,12 @@
 
 	<button ng-disabled="regForm.$invalid"
 			ng-click="regCtrl.register()"
-			style="color:black;margin-top: 15px">
+			style="color:black;margin-top:15px;margin-left: 9%">
 		Sign up
 	</button>
 
 </form>
 
-<span style="margin-left:20px" ng-if="regCtrl.registered">
+<div style="text-align: center" ng-if="regCtrl.registered">
 	Your information has been saved
-</span>
+</div>

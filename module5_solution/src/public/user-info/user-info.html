@@ -1,4 +1,4 @@
-<div ng-if="userCtrl.registered" style="margin-left:20px">
+<div ng-if="userCtrl.registered" style="text-align: center;margin-top:20px">
 	First name: {{ userCtrl.user.name }}
 	<br>
 	Last name: {{ userCtrl.user.surname }}
@@ -18,7 +18,7 @@
 
 </div>
 
-<div ng-if="!userCtrl.registered" style="margin-left:20px">
+<div ng-if="!userCtrl.registered" style="text-align:center;margin-top:20px">
 	Not signed up yet.
 	<a ui-sref="public.register"> Sign up now!</a>
 </div>
