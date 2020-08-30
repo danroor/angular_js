@@ -1,4 +1,4 @@
-<div style="margin-top:20px;margin-bottom: 15px;text-align: center">
+<div style="margin-top:20px;margin-bottom: 15px;text-align:center">
 	Sign up for restaurant's newsletter!
 </div>
 
@@ -8,10 +8,9 @@
 		   name="name"
 		   ng-model="regCtrl.name"
 		   required
-		   style="color:black">
+		   style="color:black;align-content:center">
 	
-	<span ng-if="regForm.name.$error.required && regForm.name.$touched"
-		  style="text-align: ">
+	<span ng-if="regForm.name.$error.required && regForm.name.$touched">
 		First name is required!
 	</span>
 
@@ -86,12 +85,14 @@
 
 	<button ng-disabled="regForm.$invalid"
 			ng-click="regCtrl.register()"
-			style="color:black;margin-top:15px;margin-left: 9%">
+			style="color:black;margin-top:15px;text-align:center">
 		Sign up
 	</button>
 
-</form>
+	<br>
 
-<div style="text-align: center" ng-if="regCtrl.registered">
-	Your information has been saved
-</div>
+	<span ng-if="regCtrl.registered">
+		Your information has been saved
+	</span>
+
+</form>
